@@ -9,16 +9,27 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<header id="main_navigation" class="clearfix">
-			<a href="#" class="name">Dustin Nguyen</a>
-			<nav>
-				<%= link_to "Articles", posts_path %>
-				<a href="#">Projects</a>
-				<a href="#">Contacts</a>
-			</nav>
-		</header>
+	<header id="main_navigation" class="clearfix">
+		<%= link_to "Dustin Nguyen", root_path, class: "name" %>
+		<nav>
+			<%= link_to "Articles", posts_path %>
+			<a href="#">Projects</a>
+			<a href="#">Contacts</a>
+		</nav>
+	</header>
 
-<%= yield %>
+	<%= yield %>
+	<footer id="main_footer">
+		<p class="copyright">&copy; 2015 Dustin Nguyen</p>
+		<nav>
+
+			<a href="http://twitter.com/dustinnguyen" target="_blank"><i class="fa fa-twitter"></i></a>
+			<a href="http://dribble.com" target="_blank"><i class="fa fa-dribble"></i></a>
+			<a href="http://github.com" target="_blank"><i class="fa fa-github"></i></a>
+			
+		</nav>
+		
+	</footer>
 
 </body>
 </html>
