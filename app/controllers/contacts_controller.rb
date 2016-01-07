@@ -6,11 +6,11 @@ class ContactsController < ApplicationController
 	def create
 		@contact = Contact.new(params[:contact])
 		@contact.request = request
-			if @contact.deliver
-				flash.now[:error] = nil
-			else
-				flash.now = 'Cannot send message.'
-				render :new
-			end
+		if @contact.deliver
+			flash.now[:error] = nil
+		else
+			flash.now = 'Cannot send message.'
+			render :new
+		end
 	end 
 end
